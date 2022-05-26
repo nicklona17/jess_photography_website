@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Gurmukhi&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Tiro Gurmukhi', serif;
+    letter-spacing: 2px;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -31,7 +39,6 @@ header .title {
     color: #000;
     text-decoration: none;
     font-size: 2em;
-    letter-spacing: 2px;
     transition: 0.6s;
 }
 
@@ -41,6 +48,7 @@ header ul {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    line-height: 25px;
 }
 
 header li {
@@ -52,7 +60,6 @@ header li a {
     position: relative;
     margin: 0 15px;
     text-decoration: none;
-    letter-spacing: 2px;
     transition: 0.6s;
     color: #000;
 }
@@ -82,8 +89,9 @@ header.sticky #dropdown-button {
     text-align: end;
     background-color: white;
     border: none;
-    padding-left: 2px;
-    padding-right: 2px;
+    padding-left: 2.5px;
+    padding-right: 1px;
+    padding-top: 1.5px;
     cursor: pointer;
 }
 
@@ -101,7 +109,7 @@ header.sticky #dropdown-button {
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    letter-spacing: 2px;
+    border-radius: 5px;
 }
 
 .dropdown-content a {
@@ -122,19 +130,12 @@ header.sticky #dropdown-button {
 .dropdown:hover #dropdown-button {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 3px;
+
 }
 
 header.sticky ul li a {
     color: #000;
     display: none;
-}
-
-label[for="toggle"] {
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    color: black;
-    font-size: 10rem;
 }
 
 main {
@@ -153,52 +154,107 @@ main {
     background-repeat: no-repeat;
     border-radius: 5px;
     background-blend-mode: multiply;
-    padding-top: 40px;
-    padding-bottom: 40px;
     text-align: center;
     color: rgb(255, 255, 255);
+    display: grid;
+    place-items: center;
 }
 
 .home-text {
-    padding-top: 100px;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding-bottom: 9em;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: 900;
 }
 
 .about-section {
+    background-color: #3f433d;
+    background-image: url(./images/DSC03584.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    background-blend-mode: multiply;
     text-align: center;
-    background-color: blue;
+    color: rgb(255, 255, 255);
+    display: grid;
+    place-items: center;
+}
+
+.about-text {
+    position: absolute;
+    padding-left: 2em;
+    padding-right: 2em;
+    line-height: 35px;
+    max-width: 90ch;
+}
+
+.about-text h1 {
+    padding-bottom: 1em;
 }
 
 .portfolio-section {
+    background-color: #3f433d;
+    background-image: url(./images/DSC08332.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    background-blend-mode: multiply;
     text-align: center;
-    background-color: red;
+    color: rgb(255, 255, 255);
+    display: grid;
+    justify-items: center;
+}
+
+.portfolio-text {
+    position: absolute;
+    padding-top: 7em;
 }
 
 .investment-section {
+    background-color: #3f433d;
+    background-image: url(./images/DSC07960.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    background-blend-mode: multiply;
     text-align: center;
+    color: rgb(255, 255, 255);
+    display: grid;
+    place-items: center;
 }
 
-.testimonial-section {
+.investment-text {
+    position: absolute;
+    padding-left: 2em;
+    padding-right: 2em;
+    line-height: 35px;
+    max-width: 90ch;
+}
+
+.testimonials-section {
+    background-color: #3f433d;
+    background-image: url(./images/DSC03239.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    background-blend-mode: multiply;
     text-align: center;
+    color: rgb(255, 255, 255);
+    display: grid;
+    place-items: center;
 }
 
-#about-button {
-    padding: 10px;
-}
-
-#portfolio-button {
-    padding: 10px;
-}
-
-#investment-button {
-    padding: 10px;
-}
-
-#contact-button {
-    padding: 10px;
+.testimonials-text {
+    position: absolute;
+    padding-left: 2em;
+    padding-right: 2em;
+    line-height: 35px;
+    max-width: 90ch;
 }
 
 footer {
@@ -211,4 +267,9 @@ footer {
 
 .contact-section {
     text-align: center;
+}
+
+#contact-button {
+    padding: 10px;
+    cursor: pointer;
 }
