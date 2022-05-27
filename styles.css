@@ -64,6 +64,15 @@ header li a {
     color: #000;
 }
 
+header li a:hover {
+    color: rgb(160, 160, 160);
+    text-decoration: underline;
+}
+
+header .dropdown {
+    display: none;
+}
+
 header.sticky {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -72,10 +81,6 @@ header.sticky {
 
 header.sticky .title {
     color: #000;
-}
-
-header .dropdown {
-    display: none;
 }
 
 header.sticky .dropdown {
@@ -95,16 +100,23 @@ header.sticky #dropdown-button {
     cursor: pointer;
 }
 
-.dropdown {
-    position: relative;
+header.sticky ul li a {
+    color: #000;
+    display: none;
 }
 
 #dropdown-logo {
     font-size: 2rem;
 }
 
+.dropdown {
+    position: relative;
+    margin-left: auto;
+}
+
 .dropdown-content {
     position: absolute;
+    display: none;
     text-align: end;
     background-color: #f1f1f1;
     top: 100%;
@@ -113,33 +125,27 @@ header.sticky #dropdown-button {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 5px;
-    display: none;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
 }
 
 .dropdown-content a {
+    display: block;
     color: #000;
     padding: 12px 16px;
     text-decoration: none;
-    display: block;
 }
 
 .dropdown-content a:hover {
     background-color: #ddd;
 }
 
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 .dropdown #dropdown-button:hover {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 3px;
 
-}
-
-header.sticky ul li a {
-    color: #000;
-    display: none;
 }
 
 main {
@@ -268,10 +274,6 @@ form {
     font-size: 11px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-
-.form {
-    
 }
 
 select {
