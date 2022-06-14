@@ -5,197 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jess kalahar - syracuse ny brand photographer</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <script src="https://kit.fontawesome.com/b9b0af1e33.js" crossorigin="anonymous"></script>
-
 </head>
 <body>
     <header>
-        <a href="#" class="title">jess kalahar photography</a>
-        <div class="dropdown">
-            <button id="dropdown-button">
-                <i id="dropdown-logo" class="fa-solid fa-bars"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="#about">about</a>
-                <a href="#portfolio">portfolio</a>
-                <a href="#investment">investment</a>
-                <a href="#testimonials">testimonials</a>
-                <a href="#contact">contact</a>
-                <a href="https://www.instagram.com/jesskalaharphoto/" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://www.pinterest.co.uk/jesskalaharphoto/" target="_blank">
-                    <i class="fa-brands fa-pinterest"></i>
-                </a>
-                <a href="https://m.facebook.com/jesskalaharphoto/" target="_blank">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-            </div>
-        </div>
-
-        <nav>
-            <ul>
-                <li>
-                    <a href="#about">about</a>
+        <a href="index.html" class="title">jess kalahar photography</a>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">home</a>
                 </li>
-                <li>
-                    <a href="#portfolio">portfolio</a>
+                <li class="nav-item">
+                    <a href="./about-page/index.html" class="nav-link">about</a>
                 </li>
-                <li>
-                    <a href="#investment">investment</a>
+                <li class="nav-item">
+                    <a href="./portfolio-page/index.html" class="nav-link">portfolio</a>
                 </li>
-                <li>
-                    <a href="#testimonials">testimonials</a>
+                <li class="nav-item">
+                    <a href="./investment-page/index.html" class="nav-link">investment</a>
                 </li>
-                <li>
-                    <a href="#contact">contact</a>
+                <li class="nav-item">
+                    <a href="./testimonials-page/index.html" class="nav-link">testimonials</a>
                 </li>
-                <li>
-                    <a href="https://www.instagram.com/jesskalaharphoto/" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.pinterest.co.uk/jesskalaharphoto/" target="_blank">
-                        <i class="fa-brands fa-pinterest"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://m.facebook.com/jesskalaharphoto/" target="_blank">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
+                <li class="nav-item">
+                    <a href="./contact-page/index.html" class="nav-link">contact</a>
                 </li>
             </ul>
         </nav>
     </header>
-
     <main>
-        <div id="home" class="home-section">
+        <div id="home" class="home">
             <div class="home-text">
-                <p>photography for the unconventional</p>
+                <p>brand photography for the unconventional</p>
 
                 <p>+</p>
 
                 <p>good-hearted entrepreneur</p>
             </div>
         </div>
-        
-        <div id="about" class="about-section">
-            <div class="about-text">
-                <h1>hey - i'm jess!</h1>
-
-                <p>i am a brand photographer based out of Syracuse, NY. my goal is to help unconventional + good-hearted entrepreneurs in the CNY area + beyond connect with their clients through authentic + cohesive imagery. i believe in keeping things natural + simple in order to create this genuine content - which means less posing + more of a laid-back vibe.</p>
-            </div>
-        </div>
-    
-        <div id="portfolio" class="portfolio-section">
-            <div class="portfolio-text">
-                <h1>my recent work…</h1>
-            </div>
-        </div>
-
-        <div id="testimonials" class="testimonials-section">
-            <div class="testimonials-text">
-                <p>“Jess! They are all so beautiful. I can't wait to go through them all tomorrow and pick out my favs! Thanks so much!”</p>
-
-                <p>“Jess made the entire experience so much fun from start to finish…beginning with the first consultation to the final product and EVERYTHING in between! Her energy created such a comfortable atmosphere which allowed me to feel confident during the photo session; like a friend I've known for so long who was supporting my ideas! Highly recommended”</p>
-            </div>
-        </div>
-    
-        <div id="investment" class="investment-section">
-            <form>
-                <div class="form">
-                    <p>tell me a little about yourself:</p>
-                    <input type="text" placeholder="first name" id="firstname-input">
-                    <input type="text" placeholder="last name" id="lastname-input"><br>
-                    <input type="email" placeholder="email" id="email-input">
-                    <input type="text" placeholder="instagram handle" id="instagram-input"><br>
-                    <input type="text" placeholder="pronouns" id="pronouns-input">
-                    <br><br>
-
-                    <label for="brand-summary">tell me about your brand!:</label><br>
-                    <textarea id="brand-summary" name="brand-summary"></textarea>
-                    <br><br>
-
-                    <p>which package option are you most interested in?:</p>
-                    <input type="radio" id="package1" name="package"><label for="package1"> general brand session</label>
-                    <br>
-                    <input type="radio" id="package2" name="package"><label for="package2"> your own brand experience</label>
-                    <br>
-                    <input type="radio" id="package3" name="package"><label for="package3"> quarterly sessions</label>
-                    <br>
-                    <input type="radio" id="package4" name="package"><label for="package4"> not sure yet!</label>
-                    <br><br>
-
-                    <p>group or individual session?:</p>
-                    <input type="radio" id="session1" name="session"><label for="session1"> group</label><br>
-                    <input type="radio" id="session2" name="session"><label for="session2"> individual</label>
-                    <br><br>
-
-                    <p>location:</p>
-                    <input type="radio" id="location1" name="location"><label for="location1"> my workspace/shop</label><br>
-                    <input type="radio" id="location2" name="location"><label for="location2"> rental studio (such as The Lincoln Loft or The Healing Space)</label><br>
-                    <input type="radio" id="location3" name="location"><label for="location3"> outside</label><br>
-                    <input type="radio" id="location4" name="location"><label for="location4"> destination (somewhere different other than CNY (ex. Adirondacks, North Carolina, Colorado, etc.)</label>
-                    <br>
-                </div>
-
-                <div class="form">
-                    <label for="my-workspace">if you answered "my workspace/shop" above, let me know where you are located!:</label><br>
-                    <textarea id="my-workspace" name="my-workspace"></textarea>
-                    <br>
-
-                    <label for="desination">if you answered "desination" above, let me know what your dream location is!:</label><br>
-                    <textarea id="destination" name="destination"></textarea>
-                    <br><br>
-
-                    <p>i'd like my session to take place...:</p>
-                    <input type="radio" id="time1" name="time"><label for="time1"> in 1 month from now (very urgent)</label><br>
-                    <input type="radio" id="time2" name="time"><label for="time2"> in 2-3 months from now (somewhat urgent)</label><br>
-                    <input type="radio" id="time3" name="time"><label for="time3"> in 3+ months from now (not urgent)</label>
-                    <br><br>
-
-                    <label for="anything-else">let me know anything else that may be important! (budget needs, # of people if this is a group session, props, general session ideas, etc.):</label><br>
-                    <textarea id="anything-else" name="anything-else"></textarea>
-                    <br><br>
-
-                    <label for="selector">how did you hear about me?:</label><br>
-                    <select id="selector" name="selector">
-                        <option value="social-media">social media</option>
-                        <option value="referral">referral (if so, please drop a name below!)</option>
-                        <option value="pinterest">pinterest</option>
-                        <option value="web-search">web search</option>
-                        <option value="other">other</option>
-                    </select><br>
-                    <input type="text" placeholder="referred by" id="referred-by">
-                    <br><br>
-                    
-                    <input type="text" placeholder="discount code" id="discount-code">
-                </div>
-            </form>
-        </div>
     </main>
-
     <footer>
-        <div id="contact" class="contact-section">
-            <h1>let's get to brandin'</h1>
-
-            </br>
-            <hr>
-            </br>
-
-            <button id="contact-button">get in touch</button>
-
-            </br>
-            </br>
-
-            <h3>all photo rights to jess kalahar</h3>
-
-            </br>
-            </br>
-        </div>
+        <ul class="socials">
+            <li>
+                <a href="https://www.instagram.com/jesskalaharphoto/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.pinterest.co.uk/jesskalaharphoto/" target="_blank">
+                    <i class="fa-brands fa-pinterest"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://m.facebook.com/jesskalaharphoto/" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </li>
+        </ul>
     </footer>
 </body>
 </html>
