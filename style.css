@@ -552,15 +552,22 @@ footer li a:hover {
     color: rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 500px) {
     header {
-        padding-left: 55px;
-        padding-right: 55px;
+        padding: 0 0 0 15px;
+        display: flex;
+        justify-content: start;
+        align-items: flex-end;
+        flex: 1;
+    }
+
+    header .title {
+        font-size: 25px;
     }
     
     main {
-        padding-left: 50px;
-        padding-right: 50px;
+        padding: 10px;
+        flex: 10;
     }
 
     .home-text {
@@ -576,42 +583,10 @@ footer li a:hover {
     }
 
     .testimonials-text {
-        font-size: 18px;
+        font-size: 12px;
     }
 
     .contact-text {
         font-size: 16px;
-    }
-}
-
-@media (max-width: 600px) {
-    header {
-        padding-left: 55px;
-        padding-right: 55px;
-    }
-
-    header .title {
-        font-size: 26px;
-    }
-
-    main {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-
-    .home-text {
-        font-size: 16px;
-    }
-
-    .about-text {
-        font-size: 13px;
-    }
-
-    .investment {
-        font-size: 12px;
-    }
-
-    .testimonials-text {
-        font-size: 14px;
     }
 }
