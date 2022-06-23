@@ -2,7 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Tiro+Gurmukhi:ital@1&family=Tiro+Kannada:ital@1&display=swap');
 
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -27,7 +29,7 @@ header {
 }
 
 header .title {
-    color: rgba(0, 0, 0, 0.75);
+    color: rgb(72, 72, 72);
     text-decoration: none;
     font-size: 32px;
 }
@@ -57,11 +59,11 @@ header .title {
 
 .nav-link {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgb(220, 220, 220);
 }
 
 .nav-link:hover {
-    color: rgba(0, 0, 0, 0.75);
+    color: rgb(30, 30, 30);
 }
 
 .nav-toggle {
@@ -85,12 +87,12 @@ header .title {
 
 .nav-open .hamburger {
     transform: rotate(.625turn);
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgb(220, 220, 220);
 }
 
 .nav-open .hamburger::before {
     transform: rotate(90deg) translateX(-8px);
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgb(220, 220, 220);
 }
 
 .nav-open .hamburger::after {
@@ -105,7 +107,7 @@ header .title {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgb(72, 72, 72);
     width: 2em;
     height: 3.5px;
     border-radius: 1em;
@@ -136,7 +138,7 @@ main {
 
 .home {
     height: 100%;
-    background-color: #3f433de9;
+    background-color: #3f433d;
     background-image: url(./images/DSC07960.jpg);
     background-size: cover;
     background-position: center center;
@@ -154,12 +156,12 @@ main {
 .home-text {
     line-height: 50px;
     font-size: 20px;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgb(220, 220, 220);
 }
 
 .about {
     height: 100%;
-    background-color: #3f433de9;
+    background-color: #3f433d;
     background-image: url(./images/DSC03239.jpg);
     background-size: cover;
     background-position: center center;
@@ -181,7 +183,7 @@ main {
 .about-text {
     line-height: 50px;
     font-size: 20px;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgb(220, 220, 220);
     width: 50ch;
 }
 
@@ -263,14 +265,14 @@ main {
 
 .investment {
     height: 100%;
-    background-color: #3f433de9;
+    background-color: #3f433d;
     background-image: url(./images/DSC03584.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgb(220, 220, 220);
     border-radius: 5px;
     box-shadow: 10px 10px 10px 2px rgb(158, 158, 158);
 }
@@ -294,8 +296,34 @@ form input {
     border: none;
     border-radius: 2px;
     text-indent: 5px;
+    background-color: rgb(220, 220, 220);
 }
 
+form input:hover,
+form input:focus {
+    background-color: white;
+}
+
+form input[type=radio] {
+    appearance: none;
+    width: 15px;
+	height: 15px;
+	border: 2px solid #3f433d;
+	border-radius: 50%;
+	background-clip: content-box;
+	padding: 2px;
+    background-color: rgb(220, 220, 220);
+}
+
+form input[type=radio]:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+form input[type=radio]:checked {
+    background-color: black;
+    border: 2px solid rgb(220, 220, 220);
+}
 
 form input[type='text'],
 form input[type='email'] {
@@ -308,10 +336,25 @@ form textarea {
     height: 150px;
     border: none;
     border-radius: 2px;
+    background-color: rgb(220, 220, 220);
+}
+
+form textarea:hover,
+form textarea:focus {
+    background-color: white;
 }
 
 form select {
+    padding-top: 2px;
     width: 200px;
+    font-family: 'Tiro Gurmukhi', serif;
+    background-color: rgb(220, 220, 220);
+    border-radius: 5px;
+}
+
+form select:hover,
+form select:focus {
+    background-color: white;
 }
 
 #submit-button {
@@ -320,10 +363,11 @@ form select {
     border: none;
     border-radius: 5px;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgb(220, 220, 220);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5), inset -1px -1px 1px rgba(0, 0, 0, 0.5);
-    background-image: linear-gradient(to bottom right, rgb(195, 195, 195), #3f433d);
+    background-image: linear-gradient(to bottom right, rgb(220, 220, 220), #3f433d);
+    font-family: 'Tiro Gurmukhi', serif;
 }
 
 #submit-button:hover {
@@ -338,7 +382,7 @@ form select {
 
 .testimonials {
     height: 100%;
-    background-color: #3f433de9;
+    background-color: #3f433d;
     background-image: url(./images/DSC07981.jpg);
     background-size: cover;
     background-position: center center;
@@ -358,13 +402,13 @@ form select {
     font-family: 'Tiro Kannada', serif;
     line-height: 50px;
     font-size: 20px;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgb(220, 220, 220);
     width: 50ch;
 }
 
 .contact {
     height: 100%;
-    background-color: #3f433de9;
+    background-color: #3f433d;
     background-image: url(./images/DSC04703.jpg);
     background-size: cover;
     background-position: center center;
@@ -382,7 +426,7 @@ form select {
 .contact-text {
     line-height: 50px;
     font-size: 20px;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgb(220, 220, 220);
 }
 
 #contact-button {
@@ -391,10 +435,11 @@ form select {
     border-radius: 5px;
     font-size: 17px;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgb(220, 220, 220);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5), inset -1px -1px 1px rgba(0, 0, 0, 0.5);
-    background-image: linear-gradient(to bottom right, rgb(195, 195, 195), #3f433d);
+    background-image: linear-gradient(to bottom right, rgb(220, 220, 220), #3f433d);
+    font-family: 'Tiro Gurmukhi', serif;
 }
 
 #contact-button:hover {
@@ -412,7 +457,6 @@ form select {
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
-    border: 1px solid black;
     border-radius: 10px;
     z-index: 10;
     background-color: #3f433d;
@@ -429,7 +473,7 @@ form select {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(220, 220, 220);
 }
 
 .contact-modal-header .contact-modal-title {
@@ -444,7 +488,7 @@ form select {
     background: none;
     font-size: 1.25rem;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgb(220, 220, 220);
 }
 
 .contact-modal-body {
@@ -456,10 +500,11 @@ form select {
     border: none;
     border-radius: 5px;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgb(220, 220, 220);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5), inset -1px -1px 1px rgba(0, 0, 0, 0.5);
-    background-image: linear-gradient(to bottom right, rgb(195, 195, 195), #3f433d);
+    background-image: linear-gradient(to bottom right, rgb(220, 220, 220), #3f433d);
+    font-family: 'Tiro Gurmukhi', serif;
 }
 
 #contact-submit-button:hover {
@@ -475,7 +520,7 @@ form select {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     pointer-events: none;
 }
 
@@ -499,7 +544,7 @@ footer {
 
 footer li a {
     margin: 30px;
-    color: rgba(0, 0, 0, 0.75);
+    color: rgb(72, 72, 72);
     font-size: 20px;
 }
 
