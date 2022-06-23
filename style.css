@@ -186,32 +186,74 @@ main {
 }
 
 .portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    width: 100vw;
+    height: 80vh;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    list-style: none;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide > img {
+    display: block;
     height: 100%;
-    background-color: #3f433de9;
-    background-image: url(./images/DSC03193.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-blend-mode: multiply;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    object-fit: contain;
+    object-position: center;
     border-radius: 5px;
-    box-shadow: 10px 10px 10px 2px rgb(158, 158, 158);
 }
 
-.portfolio-images {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    
+.slide[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
 }
 
-.portfolio-img {
-    width: 20%;
+.carousel-button {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color:rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem .5rem;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button:focus {
+    outline: 1px solid black;
+}
+
+.carousel-button.prev {
+    left: 1rem;
+}
+
+.carousel-button.next {
+    right: 1rem;
 }
 
 .investment-page-header {
@@ -276,8 +318,12 @@ form select {
     width: 100%;
     padding: 5px;
     border: none;
-    border-radius: 2px;
-    background-image: linear-gradient(to bottom right, rgb(195, 195, 195), rgb(230, 230, 230));
+    border-radius: 5px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.75);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5), inset -1px -1px 1px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to bottom right, rgb(195, 195, 195), #3f433d);
 }
 
 #submit-button:hover {
@@ -342,8 +388,13 @@ form select {
 #contact-button {
     padding: 10px;
     border: none;
-    border-radius: 2px;
-    background-image: linear-gradient(to bottom right, rgb(195, 195, 195), rgb(230, 230, 230));
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.75);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5), inset -1px -1px 1px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to bottom right, rgb(195, 195, 195), #3f433d);
 }
 
 #contact-button:hover {
@@ -353,6 +404,84 @@ form select {
 
 .copyright-symbol {
     font-size: 14px;
+}
+
+.contact-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: #3f433d;
+    width: 500px;
+    max-width: 60%;
+}
+
+.contact-modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.contact-modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.contact-modal-header .contact-modal-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.contact-modal-header .close-modal-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.contact-modal-body {
+    padding: 10px 15px;
+}
+
+#contact-submit-button {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.75);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5), inset -1px -1px 1px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to bottom right, rgb(195, 195, 195), #3f433d);
+}
+
+#contact-submit-button:hover {
+    background-image: linear-gradient(to bottom right, rgb(118, 118, 118), rgb(145, 145, 145));
+    cursor: pointer;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
 }
 
 footer {

@@ -48,7 +48,24 @@
                 <hr>
                 </br>
 
-                <button id="contact-button">get in touch</button>
+                <button data-modal-target="#contact-modal" id="contact-button">get in touch</button>
+                <div class="contact-modal" id="contact-modal">
+                    <div class="contact-modal-header">
+                        <div class="contact-modal-title">Contact Info</div>
+                        <button data-close-modal-button class="close-modal-button">&times;</button>
+                    </div>
+                    <div class="contact-modal-body">
+                        <form>
+                            <input type="text" placeholder="first name" id="contact-firstname-input">
+                            <input type="text" placeholder="last name" id="contact-lastname-input">
+                            <input type="email" placeholder="email" id="contact-email-input">
+                            <label for="contact-textarea">questions, comments, concerns?:</label>
+                            <textarea id="contact-textarea" name="contact-textarea"></textarea>
+                            <button id="contact-submit-button">submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="overlay"></div>
 
                 </br>
                 </br>
